@@ -16,47 +16,251 @@
         .container {
             border: 1px solid red;
         }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* gap: 5px; */
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- form:post -->
-        <form action="" method="post"> 
+        <form action="" method="post">
+             
             <!-- label{First Name:} -->
             <label for="firstName">First Name:</label> 
             <!-- input#firstName -->
             <input type="text" id="firstName" placeholder="Bob..." name="first_name">
-            <br>
+            
 
             <label for="lastName">Last Name:</label>
             <input type="text" id="lastName" name="last_name">
-            <br>
+            
 
             <label for="age">Age:</label>
             <!-- input:number#age[name=age] -->
             <input type="number" name="age" id="age">
-            <br>
+            
 
             <label for="birth-date">Birth Date:</label>
             <!-- input:date#birth-date[name=birthDate] -->
             <input type="date" name="birthDate" id="birth-date">
-            <br>
+
+            <label for="blood-type">Blood Type:</label>
+            <select name="bloodType" id="blood-type">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="AB">AB</option>
+                <option value="O">O</option>
+            </select>
+            
+            <h1>Ticket Type</h1>
+            <div>
+            <input type="radio" id="child" name="ticket_type" value="child" checked>
+            <label for="child">Child</label>
+            </div>
+
+            <div>
+            <input type="radio" id="adult" name="ticket_type" value="adult">
+            <label for="adult">Adult</label>
+            </div>
+
+            <div>
+            <input type="radio" id="senior" name="ticket_type" value="senior">
+            <label for="senior">Senior</label>
+            </div>
+
+            <h1>Pizza Toppings</h1>
+
+            <div>
+              <input type="checkbox" id="sausage" name="topping" value="sausage">
+              <label for="sausage">Sausage</label>
+            </div>
+            
+            <div>
+              <input type="checkbox" id="onions" name="topping" value="onions">
+              <label for="onions">Onions</label>
+            </div>
+            
+            <div>
+              <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+              <label for="pepperoni">Pepperoni</label>
+            </div>
+            
+            <div>
+              <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+              <label for="mushrooms">Mushrooms</label>
+            </div>
+
+            <fieldset>
+                <legend>Contact Details</legend>
+              
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+              
+                <label for="phone_number">Phone Number:</label>
+                <input type="tel" id="phone_number" name="phone_number">
+              
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+              </fieldset>
+              
+              <fieldset>
+                <legend>Delivery Details</legend>
+              
+                <label for="street_address">Street Address:</label>
+                <input type="text" id="street_address" name="street_address">
+              
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+              
+                <label for="zip_code">Zip Code:</label>
+                <input type="text" id="zip_code" name="zip_code">
+            </fieldset>
+
+            <fieldset>
+                <legend>What would you like to drink?</legend>
+              
+                <div>
+                  <input type="radio" name="drink" id="coffee" value="coffee">
+                  <label for="coffee">Coffee</label>
+                </div>
+              
+                <div>
+                  <input type="radio" name="drink" id="tea" value="tea">
+                  <label for="tea">Tea</label>
+                </div>
+              
+                <div>
+                  <input type="radio" name="drink" id="soda" value="soda">
+                  <label for="soda">Soda</label>
+                </div>
+              
+            </fieldset>
 
             <label for="user_email">Email:</label>
             <!-- input:email#email[name=user_email] -->
             <input type="email" name="email" id="user_email" placeholder="you@example.com">
-            <br>
+            
 
             <label for="user_password">Password:</label>
             <input type="password" name="password" id="user_password">
-            <br>
+            
 
             <textarea name="comment" id="comment" cols="30" rows="10">I think..</textarea>
-            <br>
+            
+            <button type="reset">Reset form</button>
 
             <!-- btn:s{Submit} -->
             <button type="submit">Submit</button>
+
+            
         </form>
+    </div>
+
+    <div class="container">
+        <h3>Input box with minimum length (3)</h3>
+        <form action="#" method="get">
+            <div>
+              <textarea placeholder="What's happening?" minlength="3"></textarea>
+            </div>
+            
+            <button type="submit">Tweet</button>
+        </form>
+
+        <h3>Input box with maximum length (20)</h3>
+        <form action="#" method="get">
+            <div>
+              <textarea placeholder="What's happening?" maxlength="20"></textarea>
+            </div>
+          
+            <button type="submit">Tweet</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="#" method="get">
+            <div>
+              <label for="quantity">Quantity (min: 1)</label>
+            </div>
+            <input type="number" id="quantity" name="quantity" min="1" value="0">
+            
+            <div>
+              <button type="submit">Place Order</button>
+            </div>
+        </form>
+
+        <form action="#" method="get">
+            <div>
+              <label for="passengers">Passengers (max: 5)</label>
+            </div>
+            <input type="number" id="passengers" name="passengers" max="5" value="0">
+             
+            <div>
+              <button type="submit">Book</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="#" method="get">
+            <div>
+              <label for="zip_code">Postal / Zip Code:</label>
+            </div>
+          
+            <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" required>
+          
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+
+          <form action="#" method="get">
+            <div>
+              <label for="zip_code">Postal / Zip Code:</label>
+            </div>
+          
+            <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code, example: 65251" required>
+          
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+
+          <form action="#" method="get">
+            <div>
+              <label for="zip_code">Postal / Zip Code:</label>
+            </div>
+          
+            <input type="text" id="zip_code" name="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code, example: 65251" placeholder="65251" required>
+            
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+    </div>
+
+    <div class="container">
+        <h3>Styling validation</h3>
+        <form action="#" method="get">
+            <div>
+              <label for="email">*Email</label>
+            </div>
+            <input type="email" id="email" name="email">
+          
+            <div>
+              <label for="website">*Website</label>
+            </div>
+            <input type="url" id="website" name="website">
+          
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+        </form>
+          
     </div>
 
     <div class="container">
