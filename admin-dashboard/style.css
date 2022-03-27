@@ -198,6 +198,7 @@ main > div > p:first-child {
 .grid {
     height: 200px;
     background-color: white;
+    box-shadow: 2px 2px 8px #888;
     border-radius: 10px;
     border-left: 8px solid orange;
     padding: 20px;
@@ -218,3 +219,25 @@ main > div > p:first-child {
     font-size: 20px;
 }
 
+#announcements .container {
+    padding: 20px 32px;
+    background-color: white;
+    box-shadow: 2px 2px 8px #888;
+    border-radius: 10px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#announcements .news {
+    border-bottom: 1px solid #888;
+}
+
+.news p:first-child {
+    font-weight: bold;
+}
+
+.news p:last-child {
+    color: #888;
+}
