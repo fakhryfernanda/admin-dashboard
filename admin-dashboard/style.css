@@ -1,8 +1,9 @@
 body {
+    height: 100vh;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 200px 1fr;
 }
 
 header {
@@ -163,3 +164,57 @@ header {
     padding: 10px 30px;
     border-radius: 20px;
 }
+
+/* Main */
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 16px;
+    gap: 24px 40px;
+}
+
+main > div {
+    /* border: 1px solid red; */
+}
+
+main > div > p:first-child {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#your-projects {
+    grid-row: 1 / -1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.grid {
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    border-left: 8px solid orange;
+    padding: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-text > p:first-child {
+    font-weight: bold;
+}
+
+.grid-buttons {
+    align-self: flex-end;
+    display: flex;
+    gap: 24px;
+    font-size: 20px;
+}
+
