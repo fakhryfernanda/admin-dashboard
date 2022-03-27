@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+header {
+    grid-column: 2 / -1;
+    background-color: pink;
+}
+
+aside {
+    grid-row: 1 / -1;
+    background-color: #1992D4;
+}
+
+main {
+    background-color: lightcyan;
+}
+
+/* Details */
+
+aside {
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 50px;
+}
+
+.logo > div {
+    height: 60px;
+    width: 60px;
+    background-size: 70px 70px;
+    border-radius: 50%;
+    background-color: white;
+    background-image: url(./images/dashboard-icon-transparent.png);
+    background-position: center;
+}
+
+.logo p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-family: sans-serif;
+}
+
+.button {
+    display: flex;
+    gap: 20px;
+    align-items: baseline;
+}
+
+.button > * {
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.upper-buttons {
+    margin-bottom: 50px;
+}
