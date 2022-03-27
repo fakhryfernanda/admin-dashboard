@@ -116,7 +116,7 @@ header {
     border-radius: 50%;
 }
 
-.profile-info p {
+.upper-header .profile-info p {
     font-family: sans-serif;
     font-weight: bold;
 }
@@ -169,7 +169,7 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 7fr 2fr;
     grid-template-rows: repeat(2, 1fr);
     padding: 16px;
     gap: 24px 40px;
@@ -239,5 +239,49 @@ main > div > p:first-child {
 }
 
 .news p:last-child {
+    color: #888;
+}
+
+#trending .container {
+    padding: 20px 32px;
+    background-color: white;
+    box-shadow: 2px 2px 8px #888;
+    border-radius: 10px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.someone-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.someone-profile .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.someone-profile .profile-info > * {
+    margin: 0;
+}
+
+.someone-profile .profile-logo {
+    flex-shrink: 0;
+    height: 40px;
+    width: 40px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.someone-profile .profile-info p:first-child {
+    font-weight: bold;
+}
+
+.someone-profile .profile-info p:last-child {
     color: #888;
 }
