@@ -1,13 +1,13 @@
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 header {
     grid-column: 2 / -1;
-    background-color: pink;
+    background-color: white;
 }
 
 aside {
@@ -16,7 +16,13 @@ aside {
 }
 
 main {
-    background-color: lightcyan;
+    background-color: #E2E8F0;
+}
+
+/* Icons */
+
+i.fa {
+    align-self: center;
 }
 
 /* Details */
@@ -52,7 +58,7 @@ aside {
 .button {
     display: flex;
     gap: 20px;
-    align-items: baseline;
+    align-items: center;
 }
 
 .button > * {
@@ -64,4 +70,96 @@ aside {
 
 .upper-buttons {
     margin-bottom: 50px;
+}
+
+/* Header */
+
+header {
+    padding: 25px 50px;
+}
+
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-container input {
+    background-color: #E2E8F0;
+    border-radius: 20px;
+    border: none;
+    width: 70%;
+    padding: 5px 16px;
+    height: 24px;
+    outline: none;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.smaller-profile-icon {
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.profile-info p {
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.lower-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hello {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.hello-text p:first-child {
+    margin: 0;
+}
+
+.hello-text p:last-child {
+    margin: 0;
+    font-size: 20px;
+}
+
+.bigger-profile-icon {
+    height: 60px;
+    width: 60px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.action-buttons > div {
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: #1992D4;
+    padding: 10px 30px;
+    border-radius: 20px;
 }
