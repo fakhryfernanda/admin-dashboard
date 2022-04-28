@@ -1,2 +1,3 @@
-# website
-Bagian-bagian dari website buatan Fakhry
+# Admin Dashboard
+
+Assignment from The Odin Project. Not finished yet.
